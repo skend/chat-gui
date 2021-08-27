@@ -29,6 +29,19 @@ class EmoteFormatter {
 
 }
 
+class EmojiFormatter {
+
+    format(chat, str, message=null){
+        let regex = `/\p{Extended_Pictographic}/u`
+        if (regex != null) {
+            return str.replace(regex, '$1<div class="emoji">$2 </div>');
+        } else {
+            return str;
+        }
+    }
+
+}
+
 class GreenTextFormatter {
 
     format(chat, str, message=null){
@@ -165,6 +178,7 @@ class BadWordsCensorshipFormatter {
 
 export {
     EmoteFormatter,
+    EmojiFormatter,
     GreenTextFormatter,
     HtmlTextFormatter,
     MentionedUserFormatter,

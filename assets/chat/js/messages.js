@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import {EmoteFormatter, GreenTextFormatter, HtmlTextFormatter, MentionedUserFormatter, UrlFormatter, EmbedUrlFormatter, BadWordsCensorshipFormatter} from './formatters'
+import {EmoteFormatter, EmojiFormatter, GreenTextFormatter, HtmlTextFormatter, MentionedUserFormatter, UrlFormatter, EmbedUrlFormatter, BadWordsCensorshipFormatter} from './formatters'
 import {DATE_FORMATS} from './const'
 import {throttle} from 'throttle-debounce'
 import moment from 'moment'
@@ -23,6 +23,7 @@ formatters.set('mentioned', new MentionedUserFormatter())
 formatters.set('green', new GreenTextFormatter())
 formatters.set('embed', new EmbedUrlFormatter())
 formatters.set('badwordscensor', new BadWordsCensorshipFormatter())
+formatters.set('emoji', new EmojiFormatter())
 
 class MessageBuilder {
 
