@@ -669,6 +669,11 @@ hr {
     }
 }
 
+.emoji {
+    display: inline-block;
+    font-size: 1.5em;
+}
+
 /* Helpers */
 .chat-scroll-notify {
     padding: 0.25em 0;
