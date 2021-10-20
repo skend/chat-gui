@@ -32,7 +32,7 @@ class EmoteFormatter {
 class EmojiFormatter {
 
     format(chat, str, message=null){
-        let regex = `/\p{Extended_Pictographic}/u`
+        let regex = `/([\uD83C-\uDBFF\uDC00-\uDFFF])+/u`
         if (regex != null) {
             return str.replace(regex, '$1<div class="emoji">$2 </div>');
         } else {
